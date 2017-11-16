@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.find(params[:username])
     session[:user_id] = @user.id
-    redirect to '/account'
+    redirect '/account'
   end
 
   get '/account' do
@@ -22,6 +22,7 @@ class ApplicationController < Sinatra::Base
 
   get '/logout' do
     session.clear
+    redirect '/'
   end
 
 
