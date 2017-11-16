@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% if self.is_logged_in? %>
+    <% if Helpers.is_logged_in? %>
     <%=self.current_user%>
     <% else %>
       <a href='/login'>Log In</a>
