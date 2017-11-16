@@ -7,8 +7,7 @@
   </head>
   <body id="page-top">
     <% if self.is_logged_in? %>
-    <h1>Welcome <%=@username%> </h1>
-    <p> <%= @balance%> </p>
+    <%=self.current_user%>
     <% else %>
       <a href='/login'>Log In</a>
       <%end%>
